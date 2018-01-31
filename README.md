@@ -1,17 +1,17 @@
-# simple-git-deploy-php
+# Simple-git-deploy-php
 simple git deploy snippet to automate continuous intergation 
 
 ## Forked from and modified as needed
 https://github.com/markomarkovic/simple-php-git-deploy
 
-## modified for iis server using php - modifications as follows
+### Modified for iis server using php - modifications as follows
 - Robocopy instead of rsync - since windows dont use rsync functionality
   - Robocopy returns various code that are more than 0 even when successfull
   - modification to check if command is robocopy then error handling accordingly
 - Backup reomoved, run seperate as scheduled tasks
 - Composer_working_dir config added to run artsian command after deployment
 
-## Requirements
+### Requirements
 
 * `git`are required on the server that's running the script
   (_server machine_).
@@ -23,7 +23,7 @@ https://github.com/markomarkovic/simple-php-git-deploy
 * If the Git repository you wish to deploy is private, the system user running PHP
   also needs to have the right SSH keys to access the remote repository.
 
-## Usage
+### Usage
 
  * Configure the script and put it somewhere that's accessible from the
    Internet. The preferred way to configure it is to use `deploy-config.php` file.
